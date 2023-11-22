@@ -36,13 +36,14 @@ $result2 = $conn->query($sql2);
     // Check if there are items in the result set
     if ($result1->num_rows > 0) {
         // Output data of each row
-        while($row = $result1->fetch_assoc()) {
-            echo "<p><strong>ID:</strong> " . $row["itemid"]. " - <strong>Name In English:</strong> " . $row["nameen"]. " - <strong>Name In Mongolian:</strong> " . $row["namemn"].  " - <strong>Wikipedia Link:</strong> " . $row["wikilink"]. " - <strong>Type:</strong> " . $row["type"]."</p>";
+        while($row1 = $result1->fetch_assoc()) {
+            echo "<p><strong>ID:</strong> " . $row1["itemid"]. " - <strong>Name In English:</strong> " . $row1["nameen"]. " - <strong>Name In Mongolian:</strong> " . $row1["namemn"].  " - <strong>Wikipedia Link:</strong> " . $row1["wikilink"]. " - <strong>Type:</strong> " . $row1["type"]."</p>";
         }
 
         if ($result2->num_rows > 0) {
+            echo "<h1>Items from Origin Table</h1>";
             while($row2 = $result2->fetch_assoc()) {
-                echo "<p><strong>ID:</strong> " . $row["itemid"]. " - <strong>Country:</strong> " . $row["countryoforigin"]. " - <strong>Condition:</strong> " . $row["condition1"]. " - <strong>Total Weight:</strong> " . $row["weight"]. " - <strong>Unit:</strong> " . $row["unit"]. " - <strong>Shipped via:</strong> " . $row["shippedby"]. " - <strong>Number of container:</strong> " . $row["quantity"]. "</p>";
+                echo "<p><strong>ID:</strong> " . $row2["itemid"]. " - <strong>Country:</strong> " . $row2["countryoforigin"]. " - <strong>Condition:</strong> " . $row2["condition1"]. " - <strong>Total Weight:</strong> " . $row2["weight"]. " - <strong>Unit:</strong> " . $row2["unit"]. " - <strong>Shipped via:</strong> " . $row2["shippedby"]. " - <strong>Number of container:</strong> " . $row2["quantity"]. "</p>";
             }
         }
     } else {
