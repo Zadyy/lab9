@@ -30,12 +30,11 @@ $result2 = $conn->query($sql2);
 </head>
 <body>
 
-    <h1>Items from Database</h1>
-
     <?php
     // Check if there are items in the result set
     if ($result1->num_rows > 0) {
         // Output data of each row
+        echo "<h1>Items from ItemInfo Table</h1>";
         while($row1 = $result1->fetch_assoc()) {
             echo "<p><strong>ID:</strong> " . $row1["itemid"]. " - <strong>Name In English:</strong> " . $row1["nameen"]. " - <strong>Name In Mongolian:</strong> " . $row1["namemn"].  " - <strong>Wikipedia Link:</strong> " . $row1["wikilink"]. " - <strong>Type:</strong> " . $row1["type"]."</p>";
         }
