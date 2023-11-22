@@ -1,0 +1,45 @@
+origin
+   itemID
+   countryOfOrigin
+   condition
+   weight
+   shippedBy
+   unit
+   quantity
+
+CREATE TABLE `lab9`.`origin` (
+    `itemid` VARCHAR(3) NOT NULL , 
+    `countryoforigin` VARCHAR(50) NOT NULL , 
+    `condition` VARCHAR(30) NOT NULL , 
+    `weight` INT(10) NOT NULL , 
+    `shippedby` VARCHAR(50) NOT NULL , 
+    `unit` VARCHAR(10) NOT NULL , 
+    `quantity` INT(20) NOT NULL ) 
+    ENGINE = InnoDB;
+
+ALTER TABLE origin 
+ADD CONSTRAINT foreignkey1 
+FOREIGN KEY (itemid) REFERENCES iteminfo(itemid);
+
+INSERT INTO origin (itemid, countryoforigin, condition1, weight, shippedby, unit, quantity)
+VALUES
+('V01', 'Mongolia', 'fresh', 120, 'ship', 'kg', 1),
+('V02', 'USA', 'spoiled', 250, 'truck', 'kg', 1),
+('V03', 'China', 'fresh', 180, 'plane', 'kg', 1),
+('V04', 'China', 'spoiled', 300, 'ship', 'kg', 1),
+('V05', 'Chile', 'fresh', 50, 'truck', 'kg', 1),
+('V06', 'Thailand', 'spoiled', 420, 'plane', 'kg', 1),
+('V07', 'Vietnam', 'fresh', 90, 'ship', 'kg', 1),
+('V08', 'Taiwan', 'spoiled', 150, 'truck', 'kg', 1),
+('V09', 'Indonesia', 'fresh', 270, 'plane', 'kg', 1),
+('V10', 'New Zealand', 'spoiled', 480, 'ship', 'kg', 1),
+('V01', 'USA', 'fresh', 200, 'truck', 'kg', 1),
+('V02', 'Brazil', 'spoiled', 350, 'plane', 'kg', 1),
+('V03', 'Italy', 'fresh', 160, 'ship', 'kg', 1),
+('V04', 'China', 'spoiled', 280, 'truck', 'kg', 1),
+('V05', 'Russia', 'fresh', 70, 'plane', 'kg', 1),
+('V06', 'Ukrain', 'spoiled', 440, 'ship', 'kg', 1),
+('V07', 'India', 'fresh', 110, 'truck', 'kg', 1),
+('V08', 'Turkey', 'spoiled', 190, 'plane', 'kg', 1),
+('V09', 'Brazil', 'fresh', 320, 'ship', 'kg', 1),
+('V10', 'Mexico', 'spoiled', 500, 'truck', 'kg', 1);

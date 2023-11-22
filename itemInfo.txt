@@ -5,12 +5,24 @@ itemInfo
    wikiLink
    type
 
+CREATE TABLE `lab9`.`iteminfo` (
+   `itemid` VARCHAR(3) NOT NULL , 
+   `nameen` VARCHAR(50) NOT NULL , 
+   `namemn` VARCHAR(50) NOT NULL , 
+   `wikilink` VARCHAR(200) NOT NULL , 
+   `type` TEXT NOT NULL , 
+   PRIMARY KEY (`itemid`)) 
+   ENGINE = InnoDB;
 
-origin
-   itemID
-   countryOfOrigin
-   condition
-   weight
-   shippedBy
-   unit
-   quantity
+INSERT INTO `iteminfo`(`itemid`, `nameen`, `namemn`, `wikilink`, `type`) 
+VALUES
+('V01', 'Potato', 'Tums', 'https://en.wikipedia.org/wiki/Potato', 'Vegetable'),
+('V02', 'Carrot', 'Luuwan', 'https://en.wikipedia.org/wiki/Carrot', 'Vegetable'), 
+('V03','Cabbage','baitsai','https://en.wikipedia.org/wiki/Cabbage','Vegetable'),
+('V04','Onion','songino','https://en.wikipedia.org/wiki/Onion','Vegetable'),
+('V05','Garlic','sarmis','https://en.wikipedia.org/wiki/Garlic','Vegetable'),
+('V06','Spinach','buutsai','https://en.wikipedia.org/wiki/Spinach','Vegetable'),
+('V07','Pumpkin','huluu','https://en.wikipedia.org/wiki/Pumpkin','Vegetable'),
+('V08','Mushroom','muug','https://en.wikipedia.org/wiki/Mushroom','Vegetable'),
+('V09','Chili','haluun chinjuu','https://en.wikipedia.org/wiki/Chili_pepper','Vegetable'),
+('v10','Pepper','amtat chinjuu','https://en.wikipedia.org/wiki/Bell_pepper','Vegetable');
