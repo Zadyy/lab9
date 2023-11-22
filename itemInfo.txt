@@ -1,0 +1,16 @@
+itemInfo
+   itemID
+   nameEN
+   nameMN
+   wikiLink
+   type
+
+
+origin
+   itemID
+   countryOfOrigin
+   condition
+   weight
+   shippedBy
+   unit
+   quantity
